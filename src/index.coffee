@@ -28,7 +28,7 @@ find = (name, address, callback, final) ->
 
 address = (b) -> b.location.display_address.join(', ')
 
-q = queue(1)
+q = queue()
 
 exports.map = (err, geojson) ->
   try
