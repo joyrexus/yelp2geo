@@ -41,3 +41,15 @@ You can also specify your default city and search term of interest:
       }
     }
 
+
+## Install
+
+1. Download or clone repo.
+
+2. Add your [Yelp API](http://www.yelp.com/developers/getting_started/api_overview) key and default prefs in `config.json`.
+
+3. `npm -g install`
+
+... OR ...
+
+    npm install yelp2geo
