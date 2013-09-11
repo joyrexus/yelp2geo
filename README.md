@@ -9,12 +9,12 @@ in [geojson](http://en.wikipedia.org/wiki/GeoJSON) format or as a map via [geojs
 
 ## Usage
 
-  yelp2geo [--in CITY] TERM
+    yelp2geo [--in CITY] TERM
 
 
 # Examples
 
-  yelp2geo tacos
-  yelp2geo --in Louisville brewpubs
-  yelp2geo --in Nashville "chinese takeout"
-  yelp2geo --map --in Milwaukee bowling
+    yelp2geo tacos
+    yelp2geo --in Louisville brewpubs
+    yelp2geo --in Nashville "chinese takeout"
+    yelp2geo --map --in Milwaukee bowling
