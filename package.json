@@ -1,0 +1,23 @@
+{
+    "name" : "yelp2geo",
+    "version" : "0.1.0",
+    "description": "Search for places related to TERM in CITY and render geocoded results",
+    "keywords" : ["yelp", "geojson", "geojson.io"],
+    "main" : "./lib/index.js",
+    "bin": {"now": "./bin/yelp2geo"},
+    "dependencies" : {
+        "request" : "~2.27.0",
+        "optimist": ">= 0.4.0",
+        "queue-async": ">= 1.0.4",
+        "opener": "~1.3.0",
+        "yelp": "0.1.1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "joyrexus/yelp"
+    },
+    "author": "J. Voigt",
+    "license": "MIT"
+}
+
+

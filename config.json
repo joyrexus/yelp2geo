@@ -1,0 +1,10 @@
+{
+  "consumer_key": "FhkimpDATArt7gnsygP-dA",
+  "consumer_secret": "_kZf0zqVyAaby4tHIvWwlG75M54",
+  "token": "PTFF4EilHE2q5doPubeJcAOFVep-PKRf",
+  "token_secret": "xvj08stdV8EQf94FegBjr1zwe9E",
+  "default": {
+    "city": "Chattanooga",
+    "term": "tacos"
+  }
+}
