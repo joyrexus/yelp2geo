@@ -2,7 +2,7 @@
 
 Find TERM-related places in CITY and render results as geojson or map.
 
-![conversion process](images/convert.png, "Convert")
+![conversion process](images/convert.png)
 
 That is, you can search for places falling in some category ("chinese
 takeout") within some city ("Seattle") and render the geocoded location results
