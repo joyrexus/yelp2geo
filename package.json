@@ -4,7 +4,7 @@
     "description": "Search for places related to TERM in CITY and render geocoded results",
     "keywords" : ["yelp", "geojson", "geojson.io"],
     "main" : "./lib/index.js",
-    "bin": {"now": "./bin/yelp2geo"},
+    "bin": {"yelp2geo": "./bin/yelp2geo"},
     "dependencies" : {
         "request" : "~2.27.0",
         "optimist": ">= 0.4.0",
@@ -19,5 +19,3 @@
     "author": "J. Voigt",
     "license": "MIT"
 }
-
-
