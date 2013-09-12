@@ -14,7 +14,7 @@ in [geojson](http://en.wikipedia.org/wiki/GeoJSON) format or as a map via [geojs
     yelp2geo [--in CITY] [--map] TERM
 
 
-# Examples
+## Examples
 
     yelp2geo tacos
     yelp2geo --in Louisville brewpubs
