@@ -23,8 +23,16 @@ coords = (name, address, data) ->
 find = (name, address, callback, final) -> 
   url = "https://maps.googleapis.com/maps/api/geocode/json?address=\"#{address}\"&sensor=false"
   req url, (err, res, body) -> 
-    result = callback name, address, JSON.parse(body)
-    final null, result
+    if err
+      console.log err
+    else 
+      data = JSON.parse(body)
+      if data.error_message
+        console.log "Google's Geocoding API says ..."
+        console.log data.status, data.error_message
+      else
+        result = callback name, address, data
+        final null, result
 
 address = (b) -> b.location.display_address.join(', ')
 
@@ -41,7 +49,7 @@ exports.print = (err, geojson) -> console.log geojson
 exports.search = (term, city, callback) ->
 
   render = (err, data) ->
-    q.defer(find, b.name, address(b), coords) for i, b of data.businesses when i < 11
+    q.defer(find, b.name, address(b), coords) for i, b of data.businesses when i < 10
     q.awaitAll (err, results) -> 
       output = 
         type: "FeatureCollection"
