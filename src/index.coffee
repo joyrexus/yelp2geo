@@ -28,7 +28,7 @@ find = (name, address, callback, final) ->
 
 address = (b) -> b.location.display_address.join(', ')
 
-q = queue()
+q = queue(10)
 
 exports.map = (err, geojson) ->
   try
@@ -41,7 +41,7 @@ exports.print = (err, geojson) -> console.log geojson
 exports.search = (term, city, callback) ->
 
   render = (err, data) ->
-    q.defer(find, b.name, address(b), coords) for b in data.businesses
+    q.defer(find, b.name, address(b), coords) for i, b of data.businesses when i < 11
     q.awaitAll (err, results) -> 
       output = 
         type: "FeatureCollection"

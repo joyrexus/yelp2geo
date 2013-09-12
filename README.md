@@ -11,16 +11,28 @@ in [geojson](http://en.wikipedia.org/wiki/GeoJSON) format or as a map via [geojs
 
 ## Usage
 
+### CLI
+
     yelp2geo [--in CITY] [--map] TERM
 
-
-## Examples
+For example ...
 
     yelp2geo tacos
     yelp2geo --in Louisville brewpubs
     yelp2geo --in Nashville "chinese takeout"
     yelp2geo --in Milwaukee --map "bowling alleys"
 
+### API
+
+```coffeescript
+{search, print, map} = require 'yelp2geo'
+
+callback = (err, geojson) -> console.log geojson
+
+search('coffee', 'Seattle', callback)
+search('denim', 'Nashville', print)
+search('bourbon', 'Louisville', map)
+```
 
 ## Config
 
