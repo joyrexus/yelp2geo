@@ -65,3 +65,8 @@ You can also specify your default city and search term of interest:
 ... OR ...
 
     npm install yelp2geo
+
+
+## Limitations
+
+`yelp2geo` utilizes two API services: Yelp's Search API and Google's Geocoding API.  Both services limit the number and frequency of requests you can make.  The geocoding service is [particularly restrictive](https://developers.google.com/maps/documentation/geocoding/index#Limits), so we've limited the number of search results returned from Yelp that actually get geocoded.  That is, you'll only get the top 10 results for "tacos" in "Los Angeles" instead of the full list.
